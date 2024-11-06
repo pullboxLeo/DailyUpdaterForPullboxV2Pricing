@@ -36,7 +36,7 @@ def query_prize_table():
 
         cur = conn.cursor()
 
-        cur.execute("SELECT purple_mana_new_inv_id, id FROM prize WHERE is_manually_priced = false")  # Added LIMIT 100
+        cur.execute("SELECT purple_mana_new_inv_id, id FROM prize WHERE is_manually_priced = false")
 
         rows = cur.fetchall()
 
