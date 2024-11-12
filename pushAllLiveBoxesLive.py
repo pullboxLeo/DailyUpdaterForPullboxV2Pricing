@@ -100,7 +100,7 @@ def query_box_table():
                 "is_live": bool(box_row[4]),
                 "edge": int(box_row[8]) if box_row[8] else 12,
                 "is_hidden": bool(box_row[9]),
-                "color": "#6b7280",
+                "color": box_color,
                 "items": []
             }
             
@@ -145,7 +145,12 @@ def query_box_table():
             
             # Send the request
             try:
-                response = requests.post(pullbox_api_url, headers=headers, json=box_data)
+                response = requests.post(
+                    pullbox_api_url, 
+                    headers=headers, 
+                    json=box_data,
+                    timeout=(25, 45)  # (connect_timeout, read_timeout) in seconds
+                )
                 print(f"Response Status Code: {response.status_code}")
                 print(f"Response Content: {response.text}")
                 

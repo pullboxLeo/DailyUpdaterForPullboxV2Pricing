@@ -5,11 +5,16 @@ import psycopg2
 import pyautogui
 import time
 import random
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, StaleElementReferenceException
 import logging
 import undetected_chromedriver as uc
 from fake_useragent import UserAgent
 from concurrent.futures import ThreadPoolExecutor, as_completed
-
+from screeninfo import get_monitors
+import requests
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
@@ -45,10 +50,11 @@ def load_retool_db():
 def get_test_urls(conn):
     cursor = conn.cursor()
     cursor.execute("""
-        SELECT DISTINCT tcgplayer_url 
+        SELECT tcgplayer_url 
         FROM prize 
         WHERE tcgplayer_url IS NOT NULL 
-        LIMIT 160
+        AND box_id = 'dd5dffeb-c40d-4a6c-b8cb-dde0d7ef5a63'
+        LIMIT 32
     """)
     urls = [row[0] for row in cursor.fetchall()]
     logger.info(f"Retrieved {len(urls)} unique URLs")
@@ -66,6 +72,8 @@ def update_values(conn, value_data):
 
 def get_monitor_resolution():
     width, height = pyautogui.size()
+    monitors = get_monitors()
+    print(monitors)
     logger.info(f"Detected monitor resolution: {width}x{height}")
     return width, height
 
@@ -82,7 +90,7 @@ def initialize_webdriver():
     }
     chrome_options.add_experimental_option("prefs", prefs)
 
-    try:
+    try: 
         driver = uc.Chrome(options=chrome_options)
         logger.info("Webdriver initialized successfully")
         return driver
@@ -112,15 +120,77 @@ def position_to_subquadrant(driver, quadrant):
 def process_url_batch(driver, urls, position):
     """Process a batch of URLs in a single browser window"""
     results = []
+    discord_webhook_url = os.getenv('DISCORD_WEBHOOK_URL')
     
     for url in urls:
         try:
+            # Wait for initial page load
             driver.get(url)
-            time.sleep(2)
-            results.append((url, 99999))
-            logger.info(f"Processed URL: {url}")
+            time.sleep(1)
+            
+
+            WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.tcg-standard-button__content')))
+            time.sleep(0.1)
+
+            listing_elements = WebDriverWait(driver, 20).until(
+                EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.listing-item__listing-data'))
+            )
+            time.sleep(1)
+            logger.info(f"Number of listing elements found: {len(listing_elements)}")
+
+            listings = driver.find_elements(By.CSS_SELECTOR, '.listing-item__listing-data')
+            logger.info(f"Number of listings after delay: {len(listings)}")
+            prices = []
+            try:
+                price_elements = WebDriverWait(driver, 10).until(
+                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".listing-item__listing-data__info__price:not(:empty)"))
+                )
+                print("found elements")
+
+                price_texts = WebDriverWait(driver, 10).until(
+                    lambda x: [el.get_attribute('textContent') for el in price_elements]
+                )
+
+                for price_text in price_texts:
+                    try:
+                        price = float(price_text.replace('$', '').replace(',', ''))
+                        prices.append(price)
+                    except ValueError:
+                        print("no price")
+
+                if prices:
+                    mean_price = sum(prices) / len(prices)
+                    results.append((url, mean_price))
+                    logger.info(f"Processed URL: {url}")
+                else:
+                    # No prices found - notify Discord and continue
+                    if discord_webhook_url:
+                        message = {"content": f"⚠️ No prices found for card: {url}"}
+                        try:
+                            requests.post(discord_webhook_url, json=message)
+                        except Exception as e:
+                            logger.error(f"Failed to send Discord notification: {e}")
+                    results.append((url, 0))  # Add with 0 price instead of failing
+            
+            except (TimeoutException, StaleElementReferenceException) as e:
+                if discord_webhook_url:
+                    message = {"content": f"🚫 Error scraping card: {url}\nError: {str(e)}"}
+                    try:
+                        requests.post(discord_webhook_url, json=message)
+                    except Exception as e:
+                        logger.error(f"Failed to send Discord notification: {e}")
+                logger.error(f"Error scraping prices: {e}")
+                results.append((url, 0))
+                
         except Exception as e:
+            if discord_webhook_url:
+                message = {"content": f"❌ Failed to process card: {url}\nError: {str(e)}"}
+                try:
+                    requests.post(discord_webhook_url, json=message)
+                except Exception as e:
+                    logger.error(f"Failed to send Discord notification: {e}")
             logger.error(f"Error processing {url}: {e}")
+            results.append((url, 0))
     
     return results
 
@@ -148,7 +218,7 @@ def main():
     drivers = []
     try:
         # Initialize 16 drivers and position them once
-        for i in range(1, 17):
+        for i in range(1, 3):
             driver = initialize_webdriver()
             position_to_subquadrant(driver, i)  # Position each driver once
             drivers.append(driver)
@@ -156,9 +226,9 @@ def main():
         
         # Process URLs in batches of 16
         all_results = []
-        for i in range(0, len(urls), 16):
-            batch_urls = urls[i:i+16]
-            logger.info(f"Processing batch {i//16 + 1} of {(len(urls) + 15)//16}")
+        for i in range(0, len(urls), 2):
+            batch_urls = urls[i:i+2]
+            logger.info(f"Processing batch {i//2 + 1} of {(len(urls) + 1)//2}")
             
             # Split batch among available drivers
             with ThreadPoolExecutor(max_workers=len(batch_urls)) as executor:

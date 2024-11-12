@@ -1,0 +1,748 @@
+{
+  "id": "1346679f-574d-4fc0-95ec-28850b082ef4",
+  "name": "The Marsh Badge!",
+  "slug": "the-marsh-badge",
+  "image": "https://pullbox-images.s3.amazonaws.com/games/334bc78d-c2ea-41d4-aa1b-0aa94d6ba927.png",
+  "splash_image": "https://pullbox-images.s3.amazonaws.com/games/0bf8da5e-1b99-47e0-a288-4f11107d8726.png",
+  "categories": [
+    "pokemon"
+  ],
+  "tags": [
+    "Artifacts"
+  ],
+  "is_live": true,
+  "edge": 12,
+  "is_hidden": false,
+  "color": "#6b7280",
+  "items": [
+    {
+      "external_id": "a86084d3-7247-4405-b093-9b71dfc8eeed",
+      "name": "Sabrina's Haunter",
+      "image": "https://images.pokemontcg.io/gym2/55_hires.png",
+      "value": 1191,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 7,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "b7b0ebe4-de37-4708-8308-6499e00f8e81",
+      "name": "Sabrina's Hypno",
+      "image": "https://images.pokemontcg.io/gym2/56_hires.png",
+      "value": 432,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 12,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "d698fb44-5a6a-4caa-9075-db11ced3691b",
+      "name": "Sabrina's Gastly",
+      "image": "https://images.pokemontcg.io/gym2/96_hires.png",
+      "value": 201,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 40,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "84e4f993-9780-463f-a948-8cb56993e6f3",
+      "name": "Sabrina's Golduck",
+      "image": "https://images.pokemontcg.io/gym2/30_hires.png",
+      "value": 1315,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 7,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "a235d07a-d9ee-4aae-bdfd-24d231dacfb9",
+      "name": "Sabrina's Jynx",
+      "image": "https://images.pokemontcg.io/gym1/59_hires.png",
+      "value": 334,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 22,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "6cfc2614-6b5d-4c1a-8203-07f0ea4a1db0",
+      "name": "Sabrina's Gastly",
+      "image": "https://images.pokemontcg.io/gym2/97_hires.png",
+      "value": 634,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 12,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "11acd1f5-d810-400c-979c-d2ae5f7eb1d0",
+      "name": "Sabrina's Gengar",
+      "image": "https://images.pokemontcg.io/gym2/29_hires.png",
+      "value": 10268,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 3,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "28e13eb8-82c0-43b4-91de-e710c30cdfad",
+      "name": "Sabrina's Jynx",
+      "image": "https://images.pokemontcg.io/gym2/57_hires.png",
+      "value": 387,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 22,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "d0354234-e171-4c8e-b30b-74db9069c536",
+      "name": "Sabrina's Gastly",
+      "image": "https://images.pokemontcg.io/gym1/93_hires.png",
+      "value": 223,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 40,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "6d6ab262-0c82-4a2a-86dc-bfc32a229b8c",
+      "name": "Sabrina's Abra",
+      "image": "https://images.pokemontcg.io/gym1/91_hires.png",
+      "value": 162,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 60,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "03403345-2756-4985-8f1d-bcc61069c1ae",
+      "name": "Sabrina's Drowzee",
+      "image": "https://images.pokemontcg.io/gym2/95_hires.png",
+      "value": 128,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 70,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "283585c1-0360-4828-9a88-57deee6b0405",
+      "name": "Sabrina's Drowzee",
+      "image": "https://images.pokemontcg.io/gym1/92_hires.png",
+      "value": 133,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 70,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "545fbb06-0c08-4e28-8807-044dcfc1836e",
+      "name": "Sabrina's Mr. Mime",
+      "image": "https://images.pokemontcg.io/gym2/59_hires.png",
+      "value": 450,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 22,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "3ab9ae10-fbc3-413c-be0c-ffb2eeeb6659",
+      "name": "Sabrina's Slowbro",
+      "image": "https://images.pokemontcg.io/gym1/60_hires.png",
+      "value": 474,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 18,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "e90e375d-f2a7-49ed-be2b-88bce2604318",
+      "name": "Sabrina's Haunter",
+      "image": "https://images.pokemontcg.io/gym1/58_hires.png",
+      "value": 971,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 7,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "9c58a94a-4e63-4c47-959e-9e5de077a30e",
+      "name": "Sabrina's Psyduck",
+      "image": "https://images.pokemontcg.io/gym2/99_hires.png",
+      "value": 280,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 40,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "0e792b9e-6f08-400f-a637-30be7b77d774",
+      "name": "Sabrina's Slowpoke",
+      "image": "https://images.pokemontcg.io/gym1/95_hires.png",
+      "value": 164,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 60,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "2f2d3211-6010-4d2b-95b5-eedc0dc70236",
+      "name": "Sabrina's Porygon",
+      "image": "https://images.pokemontcg.io/gym2/98_hires.png",
+      "value": 229,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 60,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "668a1706-74b4-49f9-adde-a5ea056acb48",
+      "name": "Sabrina's Venonat",
+      "image": "https://images.pokemontcg.io/gym1/96_hires.png",
+      "value": 140,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 70,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "9cdc102d-f763-43f2-8e1f-07a3a13e991b",
+      "name": "Sabrina's Mr. Mime",
+      "image": "https://images.pokemontcg.io/gym1/94_hires.png",
+      "value": 165,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 70,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "beec32f0-4916-465e-807b-b5e452c7dc7b",
+      "name": "Sabrina's Alakazam",
+      "image": "https://images.pokemontcg.io/gym2/16_hires.png",
+      "value": 19126,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 2,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "8992a394-b3eb-40df-a7c8-04ffee048e49",
+      "name": "Sabrina's Gengar",
+      "image": "https://images.pokemontcg.io/gym1/14_hires.png",
+      "value": 54750,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 1,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "32ea01ad-ea6f-45f3-ab92-7587c3d4e2be",
+      "name": "Sabrina's Venomoth",
+      "image": "https://images.pokemontcg.io/gym1/34_hires.png",
+      "value": 880,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 5,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM1: Gym Heroes",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "7f91c0ff-d104-411a-83b0-19f15d9ebd31",
+      "name": "Sabrina's Kadabra",
+      "image": "https://images.pokemontcg.io/gym2/58_hires.png",
+      "value": 698,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 12,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "99b0875a-9576-441b-94ca-0ad9e3ca1f4b",
+      "name": "Sabrina's Abra",
+      "image": "https://images.pokemontcg.io/gym2/94_hires.png",
+      "value": 257,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 40,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "b6eaa5e7-fce5-47c5-8d9d-c0cd25b9af03",
+      "name": "Sabrina's Abra",
+      "image": "https://images.pokemontcg.io/gym2/93_hires.png",
+      "value": 159,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 60,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "b4bafd5f-cd99-4cf4-946d-bdf35decedaa",
+      "name": "Sabrina",
+      "image": "https://images.pokemontcg.io/gym2/20_hires.png",
+      "value": 8880,
+      "withdrawable": true,
+      "mass": 10,
+      "mass_unit": "g",
+      "weight": 4,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "GYM2: Gym Challenge",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "1st Edition Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    }
+  ]
+}
