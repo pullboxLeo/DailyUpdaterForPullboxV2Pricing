@@ -50,11 +50,10 @@ def load_retool_db():
 def get_test_urls(conn):
     cursor = conn.cursor()
     cursor.execute("""
-        SELECT tcgplayer_url 
+        SELECT DISTINCT tcgplayer_url 
         FROM prize 
         WHERE tcgplayer_url IS NOT NULL 
-        AND box_id = 'dd5dffeb-c40d-4a6c-b8cb-dde0d7ef5a63'
-        LIMIT 32
+        LIMIT 320
     """)
     urls = [row[0] for row in cursor.fetchall()]
     logger.info(f"Retrieved {len(urls)} unique URLs")
@@ -159,13 +158,13 @@ def process_url_batch(driver, urls, position):
                         print("no price")
 
                 if prices:
-                    mean_price = sum(prices) / len(prices)
+                    mean_price = round(sum(prices) / len(prices), 2)
                     results.append((url, mean_price))
                     logger.info(f"Processed URL: {url}")
                 else:
                     # No prices found - notify Discord and continue
                     if discord_webhook_url:
-                        message = {"content": f"⚠️ No prices found for card: {url}"}
+                        message = {"content": f"No prices found for card: {url}"}
                         try:
                             requests.post(discord_webhook_url, json=message)
                         except Exception as e:
@@ -174,7 +173,7 @@ def process_url_batch(driver, urls, position):
             
             except (TimeoutException, StaleElementReferenceException) as e:
                 if discord_webhook_url:
-                    message = {"content": f"🚫 Error scraping card: {url}\nError: {str(e)}"}
+                    message = {"content": f"Failed to scrape card: {url}\nError: {str(e)}"}
                     try:
                         requests.post(discord_webhook_url, json=message)
                     except Exception as e:
@@ -184,7 +183,7 @@ def process_url_batch(driver, urls, position):
                 
         except Exception as e:
             if discord_webhook_url:
-                message = {"content": f"❌ Failed to process card: {url}\nError: {str(e)}"}
+                message = {"content": f"Failed to process card: {url}\nError: {str(e)}"}
                 try:
                     requests.post(discord_webhook_url, json=message)
                 except Exception as e:
@@ -218,7 +217,7 @@ def main():
     drivers = []
     try:
         # Initialize 16 drivers and position them once
-        for i in range(1, 3):
+        for i in range(1, 17):
             driver = initialize_webdriver()
             position_to_subquadrant(driver, i)  # Position each driver once
             drivers.append(driver)
@@ -226,9 +225,9 @@ def main():
         
         # Process URLs in batches of 16
         all_results = []
-        for i in range(0, len(urls), 2):
-            batch_urls = urls[i:i+2]
-            logger.info(f"Processing batch {i//2 + 1} of {(len(urls) + 1)//2}")
+        for i in range(0, len(urls), 16):
+            batch_urls = urls[i:i+16]
+            logger.info(f"Processing batch {i//16 + 1} of {(len(urls) + 16 - 1)//16}")
             
             # Split batch among available drivers
             with ThreadPoolExecutor(max_workers=len(batch_urls)) as executor:

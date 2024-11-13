@@ -58,7 +58,7 @@ def query_box_table():
         
         for box_row in rows:
             # Get all cards for this box
-            cur.execute("select name, weight, value, condition, set, finish, mass, mass_unit, image, withdrawable from prize where box_id = %s", (box_row[0],))
+            cur.execute("select name, weight, value, condition, set, finish, mass, mass_unit, image, withdrawable, id from prize where box_id = %s and is_deleted = False", (box_row[0],))
             card_rows = cur.fetchall()
             
             # Debug prints
@@ -111,7 +111,7 @@ def query_box_table():
                 adjusted_value = round(raw_value * 100 * 1.46)
                 
                 item = {
-                    "external_id": str(uuid.uuid4()),
+                    "external_id": card[10],
                     "name": card[0],
                     "image": card[8],
                     "value": adjusted_value,  # Using the adjusted value
