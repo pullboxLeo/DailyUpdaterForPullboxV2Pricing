@@ -10,9 +10,9 @@ import math
 def get_color_for_coin_value(coin_value):
     if coin_value >= 100:
         return '#F7CA0F'  # Orange
-    if coin_value >= 51:
+    if coin_value >= 50:
         return '#B723F2'  # Purple
-    if coin_value >= 21:
+    if coin_value >= 20:
         return '#18B9FF'  # Blue
     if coin_value >= 5:
         return '#2DC257'  # Green

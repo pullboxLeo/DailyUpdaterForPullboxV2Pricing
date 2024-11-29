@@ -15,15 +15,20 @@ from fake_useragent import UserAgent
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from screeninfo import get_monitors
 import requests
+from psycopg2.pool import ThreadedConnectionPool
+
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
-def load_retool_db():
+# Add at the top with other globals
+connection_pool = None
+
+def initialize_connection_pool():
     load_dotenv()
     database_url = os.getenv('PRODUCTION_DATABASE_URL')
     if not database_url:
         logger.error("DATABASE_URL not found in .env file")
-        return
+        return None
 
     parsed_url = urlparse(database_url)
     dbname = parsed_url.path[1:]  
@@ -33,7 +38,10 @@ def load_retool_db():
     port = parsed_url.port or 5432 
 
     try:
-        retool_conn = psycopg2.connect(
+        # Create a pool with minimum 1 connection, maximum 10 connections
+        pool = ThreadedConnectionPool(
+            minconn=1,
+            maxconn=10,
             dbname=dbname,
             user=user,
             password=password,
@@ -41,23 +49,30 @@ def load_retool_db():
             port=port,
             sslmode='require'
         )
-        logger.info("Connected to the database successfully!")
-        return retool_conn
+        logger.info("Connection pool created successfully!")
+        return pool
     except psycopg2.Error as e:
-        logger.error(f"Error connecting to the database: {e}")
+        logger.error(f"Error creating connection pool: {e}")
         return None
 
-def get_test_urls(conn):
-    cursor = conn.cursor()
-    cursor.execute("""
-        SELECT DISTINCT tcgplayer_url 
-        FROM prize 
-        WHERE tcgplayer_url IS NOT NULL 
-        LIMIT 320
-    """)
-    urls = [row[0] for row in cursor.fetchall()]
-    logger.info(f"Retrieved {len(urls)} unique URLs")
-    return urls
+def get_test_urls(pool):
+    conn = None
+    try:
+        conn = pool.getconn()  # Get connection from pool
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT DISTINCT tcgplayer_url 
+            FROM prize 
+            WHERE tcgplayer_url IS NOT NULL 
+            AND is_deleted = false
+            AND is_manually_priced = false
+        """)
+        urls = [row[0] for row in cursor.fetchall()]
+        logger.info(f"Retrieved {len(urls)} unique URLs")
+        return urls
+    finally:
+        if conn:
+            pool.putconn(conn)  # Return connection to pool
 
 def update_values(conn, value_data):
     cursor = conn.cursor()
@@ -76,25 +91,18 @@ def get_monitor_resolution():
     logger.info(f"Detected monitor resolution: {width}x{height}")
     return width, height
 
-def initialize_webdriver():
-    logger.debug("Initializing webdriver")
+def initialize_webdriver(instance_num, use_vpn=False):
+    print(f"Starting driver #{instance_num} ({'VPN' if use_vpn else 'Direct'})")
     chrome_options = uc.ChromeOptions()
+    chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_argument("--disable-infobars")
     chrome_options.add_argument("--disable-extensions")
 
-    prefs = {
-        "credentials_enable_service": False,
-        "profile.password_manager_enabled": False,
-        "profile.default_content_setting_values.notifications": 2
-    }
-    chrome_options.add_experimental_option("prefs", prefs)
-
     try: 
         driver = uc.Chrome(options=chrome_options)
-        logger.info("Webdriver initialized successfully")
         return driver
     except Exception as e:
-        logger.error(f"Failed to initialize webdriver: {str(e)}")
+        print(f"Failed to initialize driver #{instance_num}: {str(e)}")
         raise
 
 def position_to_subquadrant(driver, quadrant):
@@ -122,7 +130,11 @@ def process_url_batch(driver, urls, position):
     discord_webhook_url = os.getenv('DISCORD_WEBHOOK_URL')
     
     for url in urls:
+        conn = None
         try:
+            # Get a connection from the pool
+            conn = connection_pool.getconn()
+            
             # Wait for initial page load
             driver.get(url)
             time.sleep(1)
@@ -158,9 +170,17 @@ def process_url_batch(driver, urls, position):
                         print("no price")
 
                 if prices:
-                    mean_price = round(sum(prices) / len(prices), 2)
-                    results.append((url, mean_price))
-                    logger.info(f"Processed URL: {url}")
+                    mean_price = round(sum(prices) / len(prices), 2) 
+                    adjusted_price = round(mean_price * 1.1, 2)  # Add 10% and round to 2 decimal places
+                    cursor = conn.cursor()
+                    cursor.execute("""
+                        UPDATE prize 
+                        SET value = %s 
+                        WHERE tcgplayer_url = %s
+                    """, (adjusted_price, url))
+                    conn.commit()
+                    results.append((url, adjusted_price))  # Store the adjusted price in results
+                    logger.info(f"Processed and updated URL: {url} (Original: ${mean_price}, Adjusted: ${adjusted_price})")
                 else:
                     # No prices found - notify Discord and continue
                     if discord_webhook_url:
@@ -170,6 +190,13 @@ def process_url_batch(driver, urls, position):
                         except Exception as e:
                             logger.error(f"Failed to send Discord notification: {e}")
                     results.append((url, 0))  # Add with 0 price instead of failing
+                    cursor = conn.cursor()
+                    cursor.execute("""
+                        UPDATE prize 
+                        SET value = %s 
+                        WHERE tcgplayer_url = %s
+                    """, (0, url))
+                    conn.commit()
             
             except (TimeoutException, StaleElementReferenceException) as e:
                 if discord_webhook_url:
@@ -190,6 +217,10 @@ def process_url_batch(driver, urls, position):
                     logger.error(f"Failed to send Discord notification: {e}")
             logger.error(f"Error processing {url}: {e}")
             results.append((url, 0))
+        finally:
+            if conn:
+                # Return the connection to the pool
+                connection_pool.putconn(conn)
     
     return results
 
@@ -202,67 +233,65 @@ def cleanup_driver(driver):
         logger.error(f"Error in cleanup: {e}")
 
 def main():
+    global connection_pool
+    
+    # Initialize the connection pool
+    connection_pool = initialize_connection_pool()
+    if not connection_pool:
+        return
+    
     # Get monitor resolution once at the start
     screen_width, screen_height = get_monitor_resolution()
     
-    # Initialize database connection
-    conn = load_retool_db()
-    if not conn:
-        return
-    
     # Get test URLs
-    urls = get_test_urls(conn)
+    urls = get_test_urls(connection_pool)
+    print(f"Retrieved {len(urls)} URLs to process")
     
-    # Initialize drivers
     drivers = []
+    all_results = []
+    
     try:
-        # Initialize 16 drivers and position them once
-        for i in range(1, 17):
-            driver = initialize_webdriver()
-            position_to_subquadrant(driver, i)  # Position each driver once
+        # Initialize 4 drivers - 2 VPN, 2 non-VPN
+        for i in range(1, 5):
+            use_vpn = i <= 2
+            driver = initialize_webdriver(i, use_vpn)
+            position_to_subquadrant(driver, i)
             drivers.append(driver)
-            time.sleep(2)  # Stagger driver creation
+            time.sleep(2)
         
-        # Process URLs in batches of 16
-        all_results = []
-        for i in range(0, len(urls), 16):
-            batch_urls = urls[i:i+16]
-            logger.info(f"Processing batch {i//16 + 1} of {(len(urls) + 16 - 1)//16}")
-            
-            # Split batch among available drivers
-            with ThreadPoolExecutor(max_workers=len(batch_urls)) as executor:
-                futures = []
-                for idx, url_subset in enumerate(batch_urls):
-                    driver = drivers[idx]
-                    futures.append(
-                        executor.submit(
-                            process_url_batch, 
-                            driver, 
-                            [url_subset], 
-                            idx + 1
-                        )
+        # Divide URLs into 4 chunks
+        driver_url_chunks = [urls[i::4] for i in range(4)]
+        
+        # Process URLs with each driver working independently
+        with ThreadPoolExecutor(max_workers=4) as executor:
+            futures = []
+            for idx, (driver, url_chunk) in enumerate(zip(drivers, driver_url_chunks)):
+                time.sleep(3)  # Stagger starts
+                futures.append(
+                    executor.submit(
+                        process_url_batch,
+                        driver,
+                        url_chunk,
+                        idx + 1
                     )
-                
-                # Collect results
-                for future in as_completed(futures):
-                    try:
-                        results = future.result()
-                        all_results.extend(results)
-                    except Exception as e:
-                        logger.error(f"Error in batch processing: {e}")
+                )
             
-            # Update database after each batch
-            update_values(conn, all_results)
-            all_results = []  # Clear results after updating
-            
+            # Process results as they complete
+            for future in as_completed(futures):
+                try:
+                    results = future.result()
+                    all_results.extend(results)
+                except Exception as e:
+                    print(f"Error in batch processing: {e}")
     finally:
         # Cleanup
         for driver in drivers:
             cleanup_driver(driver)
         
-        if conn:
-            conn.close()
-        logger.info("Cleanup completed")
+        # Clean up the connection pool
+        if connection_pool:
+            connection_pool.closeall()
+            logger.info("Connection pool closed")
 
 if __name__ == "__main__":
     main()

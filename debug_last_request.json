@@ -1,305 +1,31 @@
 {
-  "id": "f7113d97-267d-591c-8413-7919674d1109",
-  "name": "Dual or Bust!",
-  "slug": "dual-or-bust",
-  "image": "https://pullbox-images.s3.amazonaws.com/games/78134bde-96e8-4b34-8448-f50fca77c04d.png",
-  "splash_image": "https://pullbox-images.s3.amazonaws.com/games/c57ee757-43ea-4afe-8514-9de4e378544d.png",
+  "id": "98c62d39-f6d6-40a3-8149-4ba73b2bb976",
+  "name": "Tag Team Champions!",
+  "slug": "tag-team-champions",
+  "image": "https://pullbox-images.s3.amazonaws.com/games/905da979-1697-4d3e-b1b5-0158adb29d21.png",
+  "splash_image": "https://pullbox-images.s3.amazonaws.com/games/0bf8da5e-1b99-47e0-a288-4f11107d8726.png",
   "categories": [
-    "magic"
+    "pokemon"
   ],
-  "tags": [
-    "Soup!",
-    "Reserved List",
-    "Lands"
-  ],
+  "tags": [],
   "is_live": true,
-  "edge": 20,
+  "edge": 12,
   "is_hidden": false,
-  "color": "#6b7280",
+  "color": "#B723F2",
   "items": [
     {
-      "external_id": "ad0eb359-0a83-4b58-b674-8c9ed11ff95a",
-      "name": "Scrubland",
-      "image": "https://cards.scryfall.io/png/front/4/7/472034a2-0ba9-4876-ab7a-aa7013d603bb.png",
-      "value": 44930,
+      "external_id": "4ee8c59f-df41-493a-96c9-e540850ea017",
+      "name": "Umbreon & Darkrai-GX",
+      "image": "https://images.pokemontcg.io/smp/SM241_hires.png",
+      "value": 6520,
       "withdrawable": true,
-      "mass": 10,
+      "mass": 2,
       "mass_unit": "g",
-      "weight": 1,
+      "weight": 45,
       "display_properties": [
         {
           "name": "Set",
-          "value": "Revised Edition",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Condition",
-          "value": "Lightly Played+",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Finish",
-          "value": "Normal",
-          "detail_level": "BASIC"
-        }
-      ]
-    },
-    {
-      "external_id": "6cea1939-06d0-4960-a593-78627d7b9cbb",
-      "name": "Badlands",
-      "image": "https://cards.scryfall.io/png/front/5/6/56058359-3c0b-49db-a0ce-9ded4c3f4372.png",
-      "value": 56779,
-      "withdrawable": true,
-      "mass": 10,
-      "mass_unit": "g",
-      "weight": 1,
-      "display_properties": [
-        {
-          "name": "Set",
-          "value": "Revised Edition",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Condition",
-          "value": "Lightly Played+",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Finish",
-          "value": "Normal",
-          "detail_level": "BASIC"
-        }
-      ]
-    },
-    {
-      "external_id": "dd347913-bf77-403f-ad2f-b35a354fd799",
-      "name": "Taiga",
-      "image": "https://cards.scryfall.io/png/front/5/4/54c5c65a-a444-4e0f-ae44-a3722cdd32a1.png",
-      "value": 43505,
-      "withdrawable": true,
-      "mass": 10,
-      "mass_unit": "g",
-      "weight": 1,
-      "display_properties": [
-        {
-          "name": "Set",
-          "value": "Revised Edition",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Condition",
-          "value": "Lightly Played+",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Finish",
-          "value": "Normal",
-          "detail_level": "BASIC"
-        }
-      ]
-    },
-    {
-      "external_id": "1b0bd636-d2bc-4c0a-a95a-b0051519f617",
-      "name": "Volcanic Island",
-      "image": "https://cards.scryfall.io/png/front/b/1/b12e5430-0e80-47dd-80ac-85728b656a24.png",
-      "value": 94869,
-      "withdrawable": true,
-      "mass": 10,
-      "mass_unit": "g",
-      "weight": 1,
-      "display_properties": [
-        {
-          "name": "Set",
-          "value": "Revised Edition",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Condition",
-          "value": "Lightly Played+",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Finish",
-          "value": "Normal",
-          "detail_level": "BASIC"
-        }
-      ]
-    },
-    {
-      "external_id": "d82837bc-1fc3-4f10-85a9-4b8b6db14cec",
-      "name": "Tropical Island",
-      "image": "https://cards.scryfall.io/png/front/a/0/a0f5c6bc-65dc-42a1-a62d-a0b101310a1f.png",
-      "value": 64551,
-      "withdrawable": true,
-      "mass": 10,
-      "mass_unit": "g",
-      "weight": 1,
-      "display_properties": [
-        {
-          "name": "Set",
-          "value": "Revised Edition",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Condition",
-          "value": "Lightly Played+",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Finish",
-          "value": "Normal",
-          "detail_level": "BASIC"
-        }
-      ]
-    },
-    {
-      "external_id": "0d2f01a4-4f81-4c88-a9f0-e4715392d262",
-      "name": "Tundra",
-      "image": "https://cards.scryfall.io/png/front/9/c/9c9d5f72-e199-4d5b-ae7e-cc5b9bdfae99.png",
-      "value": 68972,
-      "withdrawable": true,
-      "mass": 10,
-      "mass_unit": "g",
-      "weight": 1,
-      "display_properties": [
-        {
-          "name": "Set",
-          "value": "Revised Edition",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Condition",
-          "value": "Lightly Played+",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Finish",
-          "value": "Normal",
-          "detail_level": "BASIC"
-        }
-      ]
-    },
-    {
-      "external_id": "4aa6fe70-02a6-4e90-832e-f135b02a0e90",
-      "name": "Bayou",
-      "image": "https://cards.scryfall.io/png/front/5/6/56355ff3-2232-4a11-b868-aec9a50b9ee5.png",
-      "value": 53972,
-      "withdrawable": true,
-      "mass": 10,
-      "mass_unit": "g",
-      "weight": 1,
-      "display_properties": [
-        {
-          "name": "Set",
-          "value": "Revised Edition",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Condition",
-          "value": "Lightly Played+",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Finish",
-          "value": "Normal",
-          "detail_level": "BASIC"
-        }
-      ]
-    },
-    {
-      "external_id": "2cdee4c6-869a-4b57-9ce0-3caec8d18e1a",
-      "name": "Underground Sea",
-      "image": "https://cards.scryfall.io/png/front/1/f/1f35877c-e66c-4ef0-842a-f68cd233ae4b.png",
-      "value": 110756,
-      "withdrawable": true,
-      "mass": 10,
-      "mass_unit": "g",
-      "weight": 1,
-      "display_properties": [
-        {
-          "name": "Set",
-          "value": "Revised Edition",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Condition",
-          "value": "Lightly Played+",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Finish",
-          "value": "Normal",
-          "detail_level": "BASIC"
-        }
-      ]
-    },
-    {
-      "external_id": "cb3d2b5a-7c07-48cd-bea1-468908adcd29",
-      "name": "Savannah",
-      "image": "https://cards.scryfall.io/png/front/5/a/5ae71290-c133-406c-8b17-9ea22b437806.png",
-      "value": 42759,
-      "withdrawable": true,
-      "mass": 10,
-      "mass_unit": "g",
-      "weight": 1,
-      "display_properties": [
-        {
-          "name": "Set",
-          "value": "Revised Edition",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Condition",
-          "value": "Lightly Played+",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Finish",
-          "value": "Normal",
-          "detail_level": "BASIC"
-        }
-      ]
-    },
-    {
-      "external_id": "824ba412-2710-438d-816e-161f51573f73",
-      "name": "Plateau",
-      "image": "https://cards.scryfall.io/png/front/c/6/c6ae9cff-8646-4069-8761-df734e067beb.png",
-      "value": 44967,
-      "withdrawable": true,
-      "mass": 10,
-      "mass_unit": "g",
-      "weight": 1,
-      "display_properties": [
-        {
-          "name": "Set",
-          "value": "Revised Edition",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Condition",
-          "value": "Lightly Played+",
-          "detail_level": "BASIC"
-        },
-        {
-          "name": "Finish",
-          "value": "Normal",
-          "detail_level": "BASIC"
-        }
-      ]
-    },
-    {
-      "external_id": "17218524-29ed-41dc-8209-40b67f450afd",
-      "name": "Island (0270)",
-      "image": "https://cards.scryfall.io/png/front/1/a/1a9798d6-34b3-4438-992d-d3616a7c8536.png",
-      "value": 7,
-      "withdrawable": true,
-      "mass": 10,
-      "mass_unit": "g",
-      "weight": 420,
-      "display_properties": [
-        {
-          "name": "Set",
-          "value": "WOE: Wilds of Eldraine",
+          "value": "SMP: SM Black Star Promos",
           "detail_level": "BASIC"
         },
         {
@@ -309,24 +35,24 @@
         },
         {
           "name": "Finish",
-          "value": "Normal",
+          "value": "Holofoil",
           "detail_level": "BASIC"
         }
       ]
     },
     {
-      "external_id": "e8214954-a8a8-4491-ae3f-e8cbc97e2019",
-      "name": "Mountain (0274)",
-      "image": "https://cards.scryfall.io/png/front/8/e/8e747bba-b521-4f81-9d9a-3e85747cefe9.png",
-      "value": 7,
+      "external_id": "305420cb-4de2-4d02-8e69-0c63637c1d05",
+      "name": "Togepi & Cleffa & Igglybuff-GX",
+      "image": "https://images.pokemontcg.io/sm12/143_hires.png",
+      "value": 1221,
       "withdrawable": true,
-      "mass": 10,
+      "mass": 2,
       "mass_unit": "g",
-      "weight": 420,
+      "weight": 300,
       "display_properties": [
         {
           "name": "Set",
-          "value": "WOE: Wilds of Eldraine",
+          "value": "SM12: Cosmic Eclipse",
           "detail_level": "BASIC"
         },
         {
@@ -336,24 +62,51 @@
         },
         {
           "name": "Finish",
-          "value": "Normal",
+          "value": "Holofoil",
           "detail_level": "BASIC"
         }
       ]
     },
     {
-      "external_id": "a6039a40-12dc-4916-a61f-418d35679e3a",
-      "name": "Plains (0268)",
-      "image": "https://cards.scryfall.io/png/front/4/8/486fbcf9-3a04-47f6-8927-886c2a454499.png",
-      "value": 4,
+      "external_id": "97f7d831-9cce-4e3b-aee8-ba44eb921fc0",
+      "name": "Arceus & Dialga & Palkia-GX",
+      "image": "https://images.pokemontcg.io/sm12/221_hires.png",
+      "value": 27574,
       "withdrawable": true,
-      "mass": 10,
+      "mass": 2,
       "mass_unit": "g",
-      "weight": 420,
+      "weight": 8,
       "display_properties": [
         {
           "name": "Set",
-          "value": "WOE: Wilds of Eldraine",
+          "value": "SM12: Cosmic Eclipse",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "0eb9518f-528a-48cb-8e7c-dd542d12d640",
+      "name": "Raichu & Alolan Raichu-GX",
+      "image": "https://images.pokemontcg.io/sm11/221_hires.png",
+      "value": 21373,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 17,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM11: Unified Minds",
           "detail_level": "BASIC"
         },
         {
@@ -363,24 +116,24 @@
         },
         {
           "name": "Finish",
-          "value": "Normal",
+          "value": "Holofoil",
           "detail_level": "BASIC"
         }
       ]
     },
     {
-      "external_id": "01451be9-fd7c-4594-92d8-7289da3e0d0c",
-      "name": "Plains (252) - Full Art",
-      "image": "https://cards.scryfall.io/png/front/0/a/0a143c32-d78b-40ee-8d2b-a8ce303162d6.png",
-      "value": 22,
+      "external_id": "880b76ac-37a9-40b0-bb4d-2ba08c93b890",
+      "name": "Reshiram & Zekrom-GX",
+      "image": "https://images.pokemontcg.io/sm12/222_hires.png",
+      "value": 23227,
       "withdrawable": true,
-      "mass": 10,
+      "mass": 2,
       "mass_unit": "g",
-      "weight": 420,
+      "weight": 8,
       "display_properties": [
         {
           "name": "Set",
-          "value": "BFZ: Battle for Zendikar",
+          "value": "SM12: Cosmic Eclipse",
           "detail_level": "BASIC"
         },
         {
@@ -390,24 +143,24 @@
         },
         {
           "name": "Finish",
-          "value": "Normal",
+          "value": "Holofoil",
           "detail_level": "BASIC"
         }
       ]
     },
     {
-      "external_id": "d5e1eb06-e1e1-44e3-a26a-6da6f3369a8e",
-      "name": "Swamp (264) - Full Art",
-      "image": "https://cards.scryfall.io/png/front/1/c/1c590ebb-1e3a-4861-b8f2-aef9c4259efd.png",
-      "value": 28,
+      "external_id": "a369c575-18d7-474a-ae2e-9c42f64f5d3b",
+      "name": "Charizard & Braixen-GX",
+      "image": "https://images.pokemontcg.io/smp/SM230_hires.png",
+      "value": 5069,
       "withdrawable": true,
-      "mass": 10,
+      "mass": 2,
       "mass_unit": "g",
-      "weight": 420,
+      "weight": 55,
       "display_properties": [
         {
           "name": "Set",
-          "value": "BFZ: Battle for Zendikar",
+          "value": "SMP: SM Black Star Promos",
           "detail_level": "BASIC"
         },
         {
@@ -417,24 +170,51 @@
         },
         {
           "name": "Finish",
-          "value": "Normal",
+          "value": "Holofoil",
           "detail_level": "BASIC"
         }
       ]
     },
     {
-      "external_id": "ca628632-2c13-4b59-929f-113482af9a2d",
-      "name": "Island (256) - Full Art",
-      "image": "https://cards.scryfall.io/png/front/5/c/5cde9dcf-f0b4-4e76-ac4e-d4a8ac355fbe.png",
-      "value": 22,
+      "external_id": "1dcf9def-cdde-48d4-b7c2-37ed6b7e56f2",
+      "name": "Gengar & Mimikyu-GX",
+      "image": "https://images.pokemontcg.io/sm9/165_hires.png",
+      "value": 59399,
       "withdrawable": true,
-      "mass": 10,
+      "mass": 2,
       "mass_unit": "g",
-      "weight": 420,
+      "weight": 3,
       "display_properties": [
         {
           "name": "Set",
-          "value": "BFZ: Battle for Zendikar",
+          "value": "SM9: Team Up",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "4f4ffa00-1a52-4614-9204-e7552930d388",
+      "name": "Greninja & Zoroark-GX",
+      "image": "https://images.pokemontcg.io/sm10/201_hires.png",
+      "value": 15629,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 30,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM10: Unbroken Bonds",
           "detail_level": "BASIC"
         },
         {
@@ -444,24 +224,24 @@
         },
         {
           "name": "Finish",
-          "value": "Normal",
+          "value": "Holofoil",
           "detail_level": "BASIC"
         }
       ]
     },
     {
-      "external_id": "e6a633ca-825d-4f24-9408-890e9b053d5f",
-      "name": "Swamp (0272)",
-      "image": "https://cards.scryfall.io/png/front/f/0/f0de4ea5-77e6-474e-99f9-36192bbd37d5.png",
-      "value": 9,
+      "external_id": "5a4f42c6-5fb6-4c85-a348-78fc7680021a",
+      "name": "Lucario & Melmetal-GX",
+      "image": "https://images.pokemontcg.io/smp/SM192_hires.png",
+      "value": 1654,
       "withdrawable": true,
-      "mass": 10,
+      "mass": 2,
       "mass_unit": "g",
-      "weight": 420,
+      "weight": 300,
       "display_properties": [
         {
           "name": "Set",
-          "value": "WOE: Wilds of Eldraine",
+          "value": "SMP: SM Black Star Promos",
           "detail_level": "BASIC"
         },
         {
@@ -471,24 +251,24 @@
         },
         {
           "name": "Finish",
-          "value": "Normal",
+          "value": "Holofoil",
           "detail_level": "BASIC"
         }
       ]
     },
     {
-      "external_id": "3b753a93-de21-4db3-82c0-a594064600c4",
-      "name": "Forest (273) - Full Art",
-      "image": "https://cards.scryfall.io/png/front/3/f/3f7f206a-7b5e-4fd5-8c9e-d665ac3f7dea.png",
-      "value": 28,
+      "external_id": "a1414984-e2ba-4e3c-b0ef-57418ddcdc2e",
+      "name": "Mega Sableye & Tyranitar-GX",
+      "image": "https://images.pokemontcg.io/sm11/226_hires.png",
+      "value": 22842,
       "withdrawable": true,
-      "mass": 10,
+      "mass": 2,
       "mass_unit": "g",
-      "weight": 420,
+      "weight": 10,
       "display_properties": [
         {
           "name": "Set",
-          "value": "BFZ: Battle for Zendikar",
+          "value": "SM11: Unified Minds",
           "detail_level": "BASIC"
         },
         {
@@ -498,24 +278,51 @@
         },
         {
           "name": "Finish",
-          "value": "Normal",
+          "value": "Holofoil",
           "detail_level": "BASIC"
         }
       ]
     },
     {
-      "external_id": "8889ab5d-a941-4629-b0c1-44c49b3f32c4",
-      "name": "Forest (0275)",
-      "image": "https://cards.scryfall.io/png/front/a/4/a4c99f1b-f304-42d5-bbea-32283b01d43b.png",
-      "value": 9,
+      "external_id": "1de5f71d-f026-46c8-bb45-df031150fda3",
+      "name": "Blastoise & Piplup-GX",
+      "image": "https://images.pokemontcg.io/sm12/215_hires.png",
+      "value": 20888,
       "withdrawable": true,
-      "mass": 10,
+      "mass": 2,
       "mass_unit": "g",
-      "weight": 420,
+      "weight": 17,
       "display_properties": [
         {
           "name": "Set",
-          "value": "WOE: Wilds of Eldraine",
+          "value": "SM12: Cosmic Eclipse",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "5764cf5a-144f-4e2b-bbb6-144dda9aac9f",
+      "name": "Mewtwo & Mew-GX",
+      "image": "https://images.pokemontcg.io/smp/SM191_hires.png",
+      "value": 10622,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 35,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SMP: SM Black Star Promos",
           "detail_level": "BASIC"
         },
         {
@@ -525,24 +332,51 @@
         },
         {
           "name": "Finish",
-          "value": "Normal",
+          "value": "Holofoil",
           "detail_level": "BASIC"
         }
       ]
     },
     {
-      "external_id": "42a13aa1-d33b-4a54-bd75-3071f981bdea",
-      "name": "Mountain (269) - Full Art",
-      "image": "https://cards.scryfall.io/png/front/3/c/3cecf0db-0e0e-4329-b055-bb9dad912ca8.png",
-      "value": 22,
+      "external_id": "0b2e4e0c-2a0c-4702-83ff-4474854487f2",
+      "name": "Latias & Latios-GX",
+      "image": "https://images.pokemontcg.io/sm9/170_hires.png",
+      "value": 228652,
       "withdrawable": true,
-      "mass": 10,
+      "mass": 2,
       "mass_unit": "g",
-      "weight": 420,
+      "weight": 1,
       "display_properties": [
         {
           "name": "Set",
-          "value": "BFZ: Battle for Zendikar",
+          "value": "SM9: Team Up",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "6aaa4708-598e-4215-b91f-490a05bbb847",
+      "name": "Mega Lopunny & Jigglypuff-GX",
+      "image": "https://images.pokemontcg.io/sm12/226_hires.png",
+      "value": 14209,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 30,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM12: Cosmic Eclipse",
           "detail_level": "BASIC"
         },
         {
@@ -552,7 +386,466 @@
         },
         {
           "name": "Finish",
-          "value": "Normal",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "84416fde-7e58-4f17-8253-6c656bc60e57",
+      "name": "Muk & Alolan Muk-GX",
+      "image": "https://images.pokemontcg.io/sm10/197_hires.png",
+      "value": 5742,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 45,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM10: Unbroken Bonds",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "2a0702bb-854a-421e-95d3-9a01e6c41282",
+      "name": "Gardevoir & Sylveon-GX",
+      "image": "https://images.pokemontcg.io/sm10/205_hires.png",
+      "value": 45463,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 5,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM10: Unbroken Bonds",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "a8cba522-094c-41e3-9b67-4dd3af2bf5c6",
+      "name": "Celebi & Venusaur-GX",
+      "image": "https://images.pokemontcg.io/smp/SM167_hires.png",
+      "value": 2889,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 65,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SMP: SM Black Star Promos",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "adc6ddb7-0b16-4144-bf42-177064bf10e6",
+      "name": "Moltres & Zapdos & Articuno-GX",
+      "image": "https://images.pokemontcg.io/smp/SM210_hires.png",
+      "value": 3827,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 65,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SMP: SM Black Star Promos",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "0cdc436d-91cd-4f78-8886-e825056205b5",
+      "name": "Pheromosa & Buzzwole-GX",
+      "image": "https://images.pokemontcg.io/sm10/192_hires.png",
+      "value": 5455,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 55,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM10: Unbroken Bonds",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "4f10cdbb-47fc-46a1-9e02-8de82c925371",
+      "name": "Rowlet & Alolan Exeggutor-GX",
+      "image": "https://images.pokemontcg.io/sm11/215_hires.png",
+      "value": 7821,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 45,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM11: Unified Minds",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "1fe088fb-41da-4697-b13d-828857dc928f",
+      "name": "Reshiram & Charizard-GX",
+      "image": "https://images.pokemontcg.io/smp/SM201_hires.png",
+      "value": 6348,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 45,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SMP: SM Black Star Promos",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "5d75d106-5417-4307-ae96-954e556017cb",
+      "name": "Slowpoke & Psyduck-GX",
+      "image": "https://images.pokemontcg.io/sm11/218_hires.png",
+      "value": 16200,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 23,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM11: Unified Minds",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "53364eed-416c-4906-ab88-0b95e5117f63",
+      "name": "Magikarp & Wailord-GX",
+      "image": "https://images.pokemontcg.io/sm9/161_hires.png",
+      "value": 43898,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 3,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM9: Team Up",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Lightly Played+",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "7027069b-0ad9-4883-bde8-24aee37510be",
+      "name": "Solgaleo & Lunala-GX",
+      "image": "https://images.pokemontcg.io/sm12/216_hires.png",
+      "value": 21776,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 10,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM12: Cosmic Eclipse",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "0ffe621b-4472-40b3-8728-dc2b913f4005",
+      "name": "Trevenant & Dusknoir-GX",
+      "image": "https://images.pokemontcg.io/smp/SM217_hires.png",
+      "value": 902,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 300,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SMP: SM Black Star Promos",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "03cad31c-ed32-4856-a31c-689ca4975421",
+      "name": "Venusaur & Snivy-GX",
+      "image": "https://images.pokemontcg.io/smp/SM229_hires.png",
+      "value": 4368,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 65,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SMP: SM Black Star Promos",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "865476cb-a0c7-46ce-bc69-f184ee08982e",
+      "name": "Espeon & Deoxys-GX",
+      "image": "https://images.pokemontcg.io/smp/SM240_hires.png",
+      "value": 4265,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 65,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SMP: SM Black Star Promos",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "429fc7f9-1cfa-495a-b754-f0fcf3f9d4b2",
+      "name": "Garchomp & Giratina-GX",
+      "image": "https://images.pokemontcg.io/smp/SM193_hires.png",
+      "value": 3536,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 65,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SMP: SM Black Star Promos",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "2fbfb304-2256-4f13-bf29-b1bfd6bc4f56",
+      "name": "Marshadow & Machamp-GX",
+      "image": "https://images.pokemontcg.io/sm10/199_hires.png",
+      "value": 11227,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 35,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM10: Unbroken Bonds",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "a001249f-fe44-40dd-9171-45e6355a6fc2",
+      "name": "Naganadel & Guzzlord-GX",
+      "image": "https://images.pokemontcg.io/sm12/224_hires.png",
+      "value": 7434,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 45,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SM12: Cosmic Eclipse",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
+          "detail_level": "BASIC"
+        }
+      ]
+    },
+    {
+      "external_id": "b79936a4-8cb1-4ef1-9f34-8cd809eade88",
+      "name": "Pikachu & Zekrom-GX",
+      "image": "https://images.pokemontcg.io/smp/SM168_hires.png",
+      "value": 5090,
+      "withdrawable": true,
+      "mass": 2,
+      "mass_unit": "g",
+      "weight": 55,
+      "display_properties": [
+        {
+          "name": "Set",
+          "value": "SMP: SM Black Star Promos",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Condition",
+          "value": "Near Mint",
+          "detail_level": "BASIC"
+        },
+        {
+          "name": "Finish",
+          "value": "Holofoil",
           "detail_level": "BASIC"
         }
       ]
